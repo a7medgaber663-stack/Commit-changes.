@@ -1,0 +1,146 @@
+/* Reset أساسي */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Tahoma", Arial, sans-serif;
+}
+
+/* الهيدر */
+header {
+  background: #285976;
+  color: #ffffff;
+  padding: 25px 30px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+/* قسم المنتجات */
+#products {
+  padding: 40px;
+  background: #f6f4f4;
+}
+
+#products h2 {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 2rem;
+  color: #2a667e;
+}
+
+/* شبكة المنتجات */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  gap: 30px;
+}
+
+/* الكارت */
+.product-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.307);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  /* الإضافة الجديدة عشان المحتوى يتوزع فوق وتحت */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.53);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  display: inline-block;
+  background-color: #e7e6e6;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.679);
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #286879;
+}
+
+.product-card p {
+  font-weight: bold;
+  margin: 6px 0;
+  color: #525252;
+  line-height: 1.4;
+  direction: rtl;       /* النص يقرأ من اليمين لليسار */
+  unicode-bidi: isolate; /* يخلي العربي والإنجليزي كل واحد في مكانه صح */
+}
+
+/* السعر وزرار السلة في آخر الكارت */
+.product-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column; /* يخلي السعر فوق الزرار */
+  align-items: center;    /* يخليهم في النص */
+  gap: 10px;              /* مسافة صغيرة بينهم */
+}
+
+
+.product-card .price {
+  font-weight: bold;
+  color: green;
+  font-size: 1.1rem;
+}
+
+.product-card button {
+  font-weight: bold;
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 20px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.product-card button:hover {
+  background: #0056b3;
+}
+
+/* الفوتر */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
